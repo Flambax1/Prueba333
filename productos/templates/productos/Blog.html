@@ -1,0 +1,54 @@
+{% extends "productos/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="wrapper style1">
+    <div class="container mt-5">
+        <h1 class="text-center">Blog Todoclick | Clicky News</h1>
+        <hr>
+    
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/Blog/nintendo_direct.jpg' %}" class="card-img-top" alt="Nintendo Direct">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'Blog1Nintendo' %}">¡Revisa los nuevos y alucinantes lanzamientos en el Nintendo Direct!</a></h5>
+                        <p class="text-muted">21 Jun, 2024</p>
+                        <p class="card-text">¡Juegos esperados e inesperados, remakes y sorpresas!...</p>
+                        <a href="{% url 'Blog1Nintendo' %}" class="button">LEER MÁS</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/Blog/proyectores.jpg' %}" class="card-img-top" alt="Proyectores">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'Blog2Nintendo' %}">Cuando una pantalla no es suficiente, los proyectores son la solución</a></h5>
+                        <p class="text-muted">14 Jun, 2024</p>
+                        <p class="card-text">Siempre se han usado las grandes pantallas para disfrutar...</p>
+                        <a href="{% url 'Blog2Nintendo' %}"class="button">LEER MÁS</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'img/Blog/imgMinecraft.jpg' %}" class="card-img-top" alt="Minecraft Netflix">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'Blog3Nintendo' %}">Netflix anuncia nueva serie con el tan querido y conocido Minecraft</a></h5>
+                        <p class="text-muted">07 Jun, 2024</p>
+                        <p class="card-text">Desde hace años que Netflix lanza series inspiradas en...</p>
+                        <a href="{% url 'Blog3Nintendo' %}" class="button">LEER MÁS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</section>
+
+
+{% endblock %}

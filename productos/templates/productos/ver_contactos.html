@@ -1,0 +1,44 @@
+{% extends 'productos/base.html' %}
+{% load static %}
+
+{% block custom_styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/style_lista.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="wrapper style2">
+    <h2 style="text-align: center;">Contactos Recibidos</h2>
+    <section class="contenedor">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>RUT</th>
+                    <th>Ciudad</th>
+                    <th>Correo Electrónico</th>
+                    <th>Consulta</th>
+                    <th>Fecha de Envío</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contacto in contactos %}
+                <tr>
+                    <td>{{ contacto.nombre }}</td>
+                    <td>{{ contacto.rut }}</td>
+                    <td>{{ contacto.ciudad }}</td>
+                    <td>{{ contacto.correo_electronico }}</td>
+                    <td>{{ contacto.consulta }}</td>
+                    <td>{{ contacto.fecha_envio }}</td>
+                    <td>
+                        <a  href="{% url 'eliminar_contacto' contacto.id %}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</section>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Gear Up</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block custom_styles %}{% endblock %}
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="header">
+            <h4><a href="" id="logo"><em></em></a></h4>
+            <nav id="nav">
+                <ul>
+                    <li {% if clase == 'inicio' %} class="current" {% endif %}><a href="/">Inicio</a></li>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <a href="#">{{ user.username }}</a>
+                            <ul>
+                                <li class="nav-item">
+                                    <a href="#">Mi Perfil</a>
+                                </li>
+                                <li>
+                                    <form id="logoutForm" action="{% url 'logout' %}" method="post" class="navbar-right">
+                                        {% csrf_token %}
+                                        <button type="submit" style="border: none; background: none; padding: 0; margin: 0; cursor: pointer;">Cerrar Sesion</button>
+                                    </form>
+                                </li>
+                                {% if user.is_staff %}
+                                    <li>
+                                        <a href="#">Administrar Productos</a>
+                                        <ul>
+                                            <li><a href="{% url 'producto_create' %}">Agregar Producto</a></li>
+                                            <li><a href="{% url 'producto_list' %}">Ver productos</a></li>
+                                            <li><a href="{% url 'ver_contactos' %}">Ver Formulario</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- Agrega más enlaces de administración aquí según sea necesario -->
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{% url 'login' %}">Iniciar Sesion</a>
+                        </li>
+                        <li {% if clase == 'registro' %} class="current" {% endif %}>
+                            <a href="{% url 'registro' %}">Registro</a>
+                        </li>
+                    {% endif %}
+                    <li>
+                        <a href="#">Categorías</a>
+                        <ul>
+                            <li><a href="{% url 'audifono' %}">Audífonos</a></li>
+                            <li><a href="{% url 'teclado' %}">Teclados</a></li>
+                            <li><a href="{% url 'mouse' %}">Mouse</a></li>
+                            <li><a href="{% url 'pcgamer' %}">PC Gamers</a></li>
+                            <li><a href="{% url 'notebook' %}">Notebooks</a></li>
+                            <li><a href="{% url 'monitor' %}">Monitores</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        {% block content %}{% endblock %}
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <section class="col-3 col-6-narrower col-12-mobilep">
+                        <h3>Te Ayudamos </h3>
+                        <ul class="links">
+                            <li><a href="{% url 'ayuda' %}">Centro de ayuda</a></li>
+                            <li><a href="{% url 'contacto' %}">Formulario de contacto</a></li>
+                            <li><a href="{% url 'garantia' %}">Devoluciones y cambios</a></li>
+                            <li><a href="#">Garantía</a></li>
+                        </ul>
+                    </section>
+                    <section class="col-3 col-6-narrower col-12-mobilep">
+                        <h3>Nosotros</h3>
+                        <ul class="links">
+                            <li><a href="{% url 'quienes_somos' %}">Quiénes somos</a></li>
+                            <li><a href="#">Sucursal Retiro</a></li>
+                            <li><a href="{% url 'Blog' %}">Blogs</a></li>
+                            <li><a href="{% url 'TerminosyCondiciones' %}">Términos y condiciones</a></li>
+                        </ul>
+                    </section>
+                    <section class="col-6 col-12-narrower payment-method">
+                        <h3 style="text-align: center;">Métodos de Pago</h3>
+                        <img src="{% static 'img/pago3.png' %}" alt="Métodos de Pago">
+                    </section>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <ul class="icons">
+                <li><a href="https://www.instagram.com/" class="icon brands fa-instagram"><span class="label">Twitter</span></a></li>
+                <li><a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://web.whatsapp.com/" class="icon brands fa-whatsapp"><span class="label">GitHub</span></a></li>
+                <li><a href="https://x.com/i/flow/login?input_flow_data=%7B"requested_variant"%3A"eyJteCI6IjIifQ%3D%3D"%7D" class="icon brands fa-twitter"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://www.google.com/intl/es-419/gmail/about/" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+            </ul>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <ul class="menu">
+                    <li>&copy; Untitled. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">Gear Up Corporation</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

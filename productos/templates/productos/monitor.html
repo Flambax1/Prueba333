@@ -1,0 +1,72 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Thunderobot 23.8"</span>
+                <img src="{% static 'img/monitor/monitor1.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$100990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Thunderobot 27"</span>
+                <img src="{% static 'img/monitor/monitor2.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$121990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Thunderobot 24"</span>
+                <img src="{% static 'img/monitor/monitor3.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$201990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Samsung Odyssey G6 32"</span>
+                <img src="{% static 'img/monitor/monitor4.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$472990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Samsung Odyssey G8 34"</span>
+                <img src="{% static 'img/monitor/monitor5.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$1105990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Monitor Gamer Samsung Odyssey G9 49"</span>
+                <img src="{% static 'img/monitor/monitor6.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$1430990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+{% endblock %}

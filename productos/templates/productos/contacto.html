@@ -1,0 +1,22 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/style_registro.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="wrapper style1" style="margin-bottom: -20px;">
+    <div class="container-fluid custom-container">
+        <div class="custom-form">
+            <h1 style="text-align: center;">Formulario</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="boton-item">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

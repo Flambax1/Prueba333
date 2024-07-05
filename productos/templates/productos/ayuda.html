@@ -1,0 +1,64 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/style_registro.css' %}">
+{% endblock %}
+
+{% block content %}
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-narrower">
+								<div id="sidebar">
+										<section>
+											<h3>Contáctanos</h3>
+											<p>Completa correctamente todos los campos solicitados. Uno de nuestros 
+												ejecutivos te contactará en un plazo de 20 minutos.</p>
+										</section>
+
+										<section>
+											<h1>Datos de contacto</h1>
+											<ul class="links">
+												<li><a href="#">Av.Mexico 840, Santiago, La Florida - Chile</a></li>
+												<li><a href="#">Perifericos.GearUp@gearup.cl</a></li>
+												<li><a href="#">32-2327015</a></li>
+											</ul>
+										</section>
+
+								</div>
+							</div>
+							<div class="col-8  col-12-narrower imp-narrower">
+								<div id="content">
+
+									<!-- Content -->
+
+									<section class="col-6 col-12-narrower">
+										<h3>Formulario</h3>
+										<form>
+											<div class="row gtr-50">
+												<div class="col-6 col-12-mobilep">
+													<input type="text" name="name" id="name" placeholder="Nombre" />
+												</div>
+												<div class="col-6 col-12-mobilep">
+													<input type="email" name="email" id="email" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<textarea name="message" id="message" placeholder="Mensaje" rows="5"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" class="button" value="Enviar" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+{% endblock %}

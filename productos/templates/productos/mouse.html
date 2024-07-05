@@ -1,0 +1,133 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Snake Najash Pinkker</span>
+                <img src="{% static 'img/mouse/mouse1.jpg' %}" alt="" class="img-item" data-id="modal1">
+                <span class="precio-item">$8490</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Gamer Xtech Ophidian</span>
+                <img src="{% static 'img/mouse/mouse2.jpg' %}" alt="" class="img-item" data-id="modal2">
+                <span class="precio-item">$10990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Fantech Crypto VX7</span>
+                <img src="{% static 'img/mouse/mouse3.jpg' %}" alt="" class="img-item" data-id="modal3">
+                <span class="precio-item">$11990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Logitech G203</span>
+                <img src="{% static 'img/mouse/mouse4.jpg' %}" alt="" class="img-item" data-id="modal4">
+                <span class="precio-item">$14990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Cougar Surpassion</span>
+                <img src="{% static 'img/mouse/mouse5.jpg' %}" alt="" class="img-item" data-id="modal5">
+                <span class="precio-item">$23990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Razer Viper 8K</span>
+                <img src="{% static 'img/mouse/mouse6.jpg' %}" alt="" class="img-item" data-id="modal6">
+                <span class="precio-item">$59490</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal1">&times;</span>
+        <h2>Mouse Gamer Alámbrico 1</h2>
+        <img src="{% static 'img/mouse/mouse1.jpg' %}" alt="Mouse Gamer Alámbrico 1">
+        <p>Mouse Snake Gamer Najash Pinkker NJ330 Rosa 6400 DPI RGB USB </p>
+        <p>$8490</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal2">&times;</span>
+        <h2>Mouse Gamer Alámbrico 2</h2>
+        <img src="{% static 'img/mouse/mouse2.jpg' %}" alt="Mouse Gamer Alámbrico 2">
+        <p>Mouse Gamer Xtech Ophidian 6 botones 7 colores</p>
+        <p>$10990</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal3">&times;</span>
+        <h2>Mouse Gamer Alámbrico 3</h2>
+        <img src="{% static 'img/mouse/mouse3.jpg' %}" alt="Mouse Gamer Alámbrico 3">
+        <p>Mouse gamer Fantech Crypto VX7 8.000 DPI Sakura Edition (VX7-SKE)</p>
+        <p>$11990</p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal4">&times;</span>
+        <h2>Mouse Gamer Alámbrico 4</h2>
+        <img src="{% static 'img/mouse/mouse4.jpg' %}" alt="Mouse Gamer Alámbrico 4">
+        <p>Mouse gamer Logitech G203 Blanco 8000 DPI 6 Botones (910-005794)</p>
+        <p>$14990</p>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal5">&times;</span>
+        <h2>Mouse Gamer Inalámbrico</h2>
+        <img src="{% static 'img/mouse/mouse5.jpg' %}" alt="Mouse Gamer Inalámbrico">
+        <p>Mouse gamer Cougar Surpassion RX Wireless, 7200 DPI, 6 Botones, USB, Negro</p>
+        <p>$23990</p>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal6">&times;</span>
+        <h2>Mouse Gamer Alámbrico 6</h2>
+        <img src="{% static 'img/mouse/mouse6.jpg' %}" alt="Mouse Gamer Alámbrico 6">
+        <p>Mouse Gamer Razer Viper 8K 20.000 DPI Negro Ambidiestro Cableado</p>
+        <p>$59490</p>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+{% endblock %}

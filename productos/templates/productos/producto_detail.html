@@ -1,0 +1,17 @@
+<!-- templates/productos/producto_detail.html -->
+{% extends 'productos/base.html' %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <div class="container">
+        <h2>{{ producto.nombre }}</h2>
+        <p><strong>Categoria:</strong> {{ producto.categoria }}</p>
+        <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+        <div class="button-group">
+            <a href="{% url 'producto_update' producto.pk %}" class="btn btn-primary">Editar</a>
+            <a href="{% url 'producto_delete' producto.pk %}" class="btn btn-danger">Eliminar</a>
+            <a href="{% url 'producto_list' %}" class="btn btn-secondary">Volver al inicio</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

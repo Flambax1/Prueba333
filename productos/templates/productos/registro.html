@@ -1,0 +1,47 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/style_registro.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="wrapper style1" style="margin-bottom: -20px;">
+<div class="container-fluid custom-container">
+  {% if mensaje %}
+    <div class="alert alert-primary" role="alert" id="idMensaje">
+      {{ mensaje }}
+    </div>
+  {% endif %}
+  
+  <div class="custom-form">
+    <h1 style="text-align: center;">Registrarse</h1>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="nombre">Username</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp"
+          placeholder="Ingresar usuario">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+          placeholder="Ingresar Email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Ingresar Contraseña">
+      </div>
+      <button type="submit" class="button">Guardar</button>
+    </form>
+  </div>
+</div>
+</section>
+{% endblock %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="{% static 'js/mensaje.js' %}"></script>

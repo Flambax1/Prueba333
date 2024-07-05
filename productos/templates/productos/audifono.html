@@ -1,0 +1,136 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Rioto Aviator</span>
+                <img src="{% static 'img/audifonos/audifono1.jpg' %}" alt="" class="img-item" data-id="modal1">
+                <span class="precio-item">$15000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">In-Ear GTC</span>
+                <img src="{% static 'img/audifonos/audifono2.jpg' %}" alt="" class="img-item" data-id="modal2">
+                <span class="precio-item">$25000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GTC HSG-613 RGB</span>
+                <img src="{% static 'img/audifonos/audifono3.jpg' %}" alt="" class="img-item" data-id="modal3">
+                <span class="precio-item">$35000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ozone Rage X40</span>
+                <img src="{% static 'img/audifonos/audifono4.jpg' %}" alt="" class="img-item" data-id="modal4">
+                <span class="precio-item">$18000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Krom Kyus 7.1</span>
+                <img src="{% static 'img/audifonos/audifono5.jpg' %}" alt="" class="img-item" data-id="modal5">
+                <span class="precio-item">$32000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Razer K. Kitty</span>
+                <img src="{% static 'img/audifonos/audifono6.jpg' %}" alt="" class="img-item" data-id="modal6">
+                <span class="precio-item">$103990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal1">&times;</span>
+        <h2>Rioto Aviator</h2>
+        <img src="{% static 'img/audifonos/audifono1.jpg' %}" alt="Rioto Aviator">
+        <p>Audifonos Gamer Riotoro Aviator Classic Audio Pro 7.1 Pc, Ps4, Switch</p>
+        <p>$15000</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal2">&times;</span>
+        <h2>In-Ear GTC</h2>
+        <img src="{% static 'img/audifonos/audifono2.jpg' %}" alt="In-Ear GTC">
+        <p>Audífonos bluetooth In-Ear GTC HSG-185</p>
+        <p>$25000</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal3">&times;</span>
+        <h2>GTC HSG-613 RGB</h2>
+        <img src="{% static 'img/audifonos/audifono3.jpg' %}" alt="GTC HSG-613 RGB">
+        <p>Audífono gamer GTC HSG-613 RGB Jack 3.5mm</p>
+        <p>$35000</p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal4">&times;</span>
+        <h2>Ozone Rage X40</h2>
+        <img src="{% static 'img/audifonos/audifono4.jpg' %}" alt="Ozone Rage X40">
+        <p>Audífono Gamer Ozone Rage X40, 7.1 virtual, USB, PC PS4 PS5</p>
+        <p>$18000</p>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal5">&times;</span>
+        <h2>Krom Kyus 7.1</h2>
+        <img src="{% static 'img/audifonos/audifono5.jpg' %}" alt="Mad Catz F.R.E.Q">
+        <p>Audífonos gamer Krom Kyus 7.1 PC, PS4</p>
+        <p>$32000</p>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal6">&times;</span>
+        <h2>Razer K. Kitty</h2>
+        <img src="{% static 'img/audifonos/audifono6.jpg' %}" alt="Razer K. Kitty">
+        <p>Audifonos gamer Razer Kraken Kitty Chroma RGB Black (RZ04-02980100-R3M1)</p>
+        <p>$103990</p>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+{% endblock %}

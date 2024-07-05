@@ -1,0 +1,133 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Notebook MSI Katana 17</span>
+                <img src="{% static 'img/notebooks/notebook1.jpg' %}" alt="" class="img-item" data-id="modal1">
+                <span class="precio-item">$1073990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Notebook ASUS ROG Strix G16</span>
+                <img src="{% static 'img/notebooks/notebook2.jpg' %}" alt="" class="img-item" data-id="modal2">
+                <span class="precio-item">$2938990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Notebook Gamer HP Victus 15-FB1008LA</span>
+                <img src="{% static 'img/notebooks/notebook3.jpg' %}" alt="" class="img-item" data-id="modal3">
+                <span class="precio-item">$971990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Notebook Gamer HP Victus 15-FB1007LA</span>
+                <img src="{% static 'img/notebooks/notebook4.jpg' %}" alt="" class="img-item" data-id="modal4">
+                <span class="precio-item">$936990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Notebook ASUS TUF Gaming FX507ZC4</span>
+                <img src="{% static 'img/notebooks/notebook5.jpg' %}" alt="" class="img-item" data-id="modal5">
+                <span class="precio-item">$1278990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Notebook Gamer Dell G15 5511</span>
+                <img src="{% static 'img/notebooks/notebook6.jpg' %}" alt="" class="img-item" data-id="modal6">
+                <span class="precio-item">$1547990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal1">&times;</span>
+        <h2>Notebook MSI Katana 17</h2>
+        <img src="{% static 'img/notebooks/notebook1.jpg' %}" alt="Notebook MSI Katana 17">
+        <p>MSI Katana 17, I5-12500H, 8GB RAM, 512GB SSD, NVIDIA RTX 3050 6GB, 17.3</p>
+        <p>$1073990</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal2">&times;</span>
+        <h2>Notebook ASUS ROG Strix G16</h2>
+        <img src="{% static 'img/notebooks/notebook2.jpg' %}" alt="Notebook ASUS ROG Strix G16">
+        <p>ASUS ROG Strix G16, NVIDIA RTX 4070, 16GB RAM, 1TB SSD, W11H, 16</p>
+        <p>$2938990</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal3">&times;</span>
+        <h2>Notebook Gamer HP Victus 15-FB1008LA</h2>
+        <img src="{% static 'img/notebooks/notebook3.jpg' %}" alt="Notebook Gamer HP Victus 15-FB1008LA">
+        <p>HP Victus 15-FB1008LA, Ryzen 5 7535HS, RTX 2050, 8GB RAM, 512GB SSD, W11H, 15.6</p>
+        <p>$971990</p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal4">&times;</span>
+        <h2>Notebook Gamer HP Victus 15-FB1007LA</h2>
+        <img src="{% static 'img/notebooks/notebook4.jpg' %}" alt="Notebook Gamer HP Victus 15-FB1007LA">
+        <p>HP Victus 15-FB1007LA, Ryzen 5 7535HS, RTX 2050, 8GB RAM, 512GB SSD, W11H, 15.6</p>
+        <p>$936990</p>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal5">&times;</span>
+        <h2>Notebook ASUS TUF Gaming FX507ZC4</h2>
+        <img src="{% static 'img/notebooks/notebook5.jpg' %}" alt="Notebook ASUS TUF Gaming FX507ZC4">
+        <p>Asus TUF Gaming F15 FX507VU, I7-13620H, 16GB RAM, 512GB SSD, GeForce RTX 4050, W11H, 15.6</p>
+        <p>$1278990</p>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal6">&times;</span>
+        <h2>Notebook Gamer Dell G15 5511</h2>
+        <img src="{% static 'img/notebooks/notebook6.jpg' %}" alt="Notebook Gamer Dell G15 5511">
+        <p>Dell Alienware X15 R1 i7 11800H/16GB/512GB/RTX3070</p>
+        <p>$1547990</p>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Redragon Fizz Pro</span>
+                <img src="{% static 'img/teclados/teclado1.jpg' %}" alt="" class="img-item" data-id="modal1">
+                <span class="precio-item">$40990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">híbrido Ozone Alliance</span>
+                <img src="{% static 'img/teclados/teclado2.jpg' %}" alt="" class="img-item" data-id="modal2">
+                <span class="precio-item">$25000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ozone Alpha Strike</span>
+                <img src="{% static 'img/teclados/teclado3.jpg' %}" alt="" class="img-item" data-id="modal3">
+                <span class="precio-item">$51990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Redragon Shiva K512</span>
+                <img src="{% static 'img/teclados/teclado4.jpg' %}" alt="" class="img-item" data-id="modal4">
+                <span class="precio-item">$24990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Ozone Strikeback RGB</span>
+                <img src="{% static 'img/teclados/teclado5.jpg' %}" alt="" class="img-item" data-id="modal5">
+                <span class="precio-item">$47990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Razer Huntsman</span>
+                <img src="{% static 'img/teclados/teclado6.jpg' %}" alt="" class="img-item" data-id="modal6">
+                <span class="precio-item">$103990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal1">&times;</span>
+        <h2>Teclado mecánico</h2>
+        <img src="{% static 'img/teclados/teclado1.jpg' %}" alt="Redragon Fizz Pro">
+        <p>inalámbrico Redragon Fizz Pro K616-RGB White/Pink, Switch Red, Español</p>
+        <p>$40990</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal2">&times;</span>
+        <h2>Teclado Hibrido</h2>
+        <img src="{% static 'img/teclados/teclado2.jpg' %}" alt="híbrido Ozone Alliance">
+        <P>Teclado gamer híbrido Ozone Alliance, Switch CrossTech, USB, Español</P>
+        <p>$25000</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal3">&times;</span>
+        <h2>Teclado mecánico</h2>
+        <img src="{% static 'img/teclados/teclado3.jpg' %}" alt="Ozone Alpha Strike">
+        <p>Teclado mecánico Ozone Alpha Strike TKL Switch Outemu Red, Español, RGB</p>
+        <p>$51990</p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal4">&times;</span>
+        <h2>Teclado mecánico</h2>
+        <img src="{% static 'img/teclados/teclado4.jpg' %}" alt="Redragon Shiva K512">
+        <p>Teclado gamer Redragon Shiva K512 membrana RGB, Español, Blanco</p>
+        <p>$24990</p>
+    </div>
+</div>
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal5">&times;</span>
+        <h2>Teclado mecánico</h2>
+        <img src="{% static 'img/teclados/teclado5.jpg' %}" alt="Ozone Strikeback RGB">
+        <p>Teclado mecánico Ozone Strikeback RGB, Switch Kailh Red, Español, Grafito</p>
+        <p>$47990</p>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" data-id="modal6">&times;</span>
+        <h2>Teclado mecánico</h2>
+        <img src="{% static 'img/teclados/teclado6.jpg' %}" alt="Razer Huntsman">
+        <p>Teclado gamer Razer Huntsman Mini Switch Red Mercury White (108RZ00049)</p>
+        <p>$103990</p>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/modal.js' %}"></script>
+{% endblock %}

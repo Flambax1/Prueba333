@@ -1,0 +1,71 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Black V1</span>
+                <img src="{% static 'img/pc1.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$349,990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Black V0</span>
+                <img src="{% static 'img/pc2.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$299,990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Black V5</span>
+                <img src="{% static 'img/pc3.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$1,249,990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Black V2</span>
+                <img src="{% static 'img/pc4.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$479,000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Black V3</span>
+                <img src="{% static 'img/pc5.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$729,990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pc Gamer Vibora Pink V1</span>
+                <img src="{% static 'img/pc6.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$379,990</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">$0.00</span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/util.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+{% endblock %}

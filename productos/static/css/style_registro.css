@@ -1,0 +1,33 @@
+.custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinear los elementos al inicio del contenedor */
+    min-height: 90vh; /* Usar min-height para asegurar que ocupe al menos el 90% del viewport */
+    margin-top: 10vh; /* Ajustar el margen superior para que esté más pegado al navbar */
+}
+
+.custom-form {
+    max-width: 500px; /* Ancho máximo del formulario */
+    width: 100%;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 600px) {
+    .custom-form {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+/* Ajustes para el formulario específico */
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos de campos */
+}
+
+.btn-primary {
+    width: 20%; /* Botón ocupa el ancho completo del contenedor */
+}

@@ -1,0 +1,46 @@
+/* style_lista.css */
+
+/* Estilos generales para todas las tablas */
+.table-container {
+    display: table;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.content {
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho de la tabla */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Ajustes específicos para la tabla de Lista de Contratos */
+.content table {
+    width: 100%; /* Ajusta el ancho de la tabla dentro del contenedor */
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}

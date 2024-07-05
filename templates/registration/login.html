@@ -1,0 +1,29 @@
+{% extends "productos/base.html" %}
+{% load static %}
+
+{% block custom_styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="wrapper style1" style="margin-bottom: -20px;">
+    <div class="container-fluid custom-container">
+        <div class="custom-form">
+            <h1 style="text-align: center;">Iniciar Sesion</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="button">Entrar</button>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $(document).ready(function(){
+    $("#idMensaje").delay(2000).fadeOut("slow");
+  });
+</script>
+{% endblock %}

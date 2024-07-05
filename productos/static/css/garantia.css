@@ -1,0 +1,26 @@
+/* Estilos específicos para los acordeones de garantía */
+.garantia-accordion .accordion-header {
+    background-color: #4CAF50; /* Color verde de Razer */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 18px;
+}
+
+.garantia-accordion .panel {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.garantia-accordion .panel p {
+    margin-bottom: 10px;
+}
+
+.garantia-accordion .panel ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}

@@ -1,0 +1,24 @@
+<!-- templates/producto_form.html -->
+{% extends 'productos/base.html' %}
+{% load static %}
+{% block custom_styles %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/style_registro.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="wrapper style2" style="margin-bottom: -20px;">
+    <h2 style="text-align: center;">{{ form.instance.pk|yesno:"Editar Producto,Nuevo Producto" }}</h2>
+    <div class="container-fluid custom-container">
+        <div class="custom-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Guardar</button>
+                <a class="button" href="{% url 'producto_list' %}">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
